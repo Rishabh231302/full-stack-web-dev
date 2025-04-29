@@ -1,0 +1,12 @@
+<h1>TODO-APP</h1>
+<input type="text" placeholder="Enter the name" [(ngModel)]="work" style="margin-left: 20px;">
+<input type="date" [(ngModel)]="date" id="date">
+<button (click)="addList()">ADD</button>
+@for(works of todo; track works){
+    <ul id="list">
+        <li>{{works.id}}</li>
+        <li>{{works.work}}</li>
+        <li>{{works.date}}</li>
+        <button (click)="delet(works.id)">delet</button>
+    </ul>
+}

@@ -1,0 +1,7 @@
+<form #f="ngForm" >
+    <input name="name" ngModel required placeholder="Name"> <br>
+    <input name="email" ngModel email required placeholder="Email"><br>
+    <input name="password" ngModel required minlength="6" placeholder="Password"><br>
+    <button [disabled]="!f.valid">Submit</button>
+</form>
+  
